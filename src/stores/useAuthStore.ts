@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { getStorageItem, setStorageItem, StorageKeys } from './Storage.ts';
 
 interface AuthState {
   username: string | null;
@@ -10,19 +11,19 @@ interface AuthState {
 }
 
 export const useAuthStore = create<AuthState>(set => ({
-  username: null,
-  isAuthenticated: false,
+  username: getStorageItem(StorageKeys.userName) || null,
+  isAuthenticated: !!getStorageItem(StorageKeys.userName),
   loading: false,
   error: null,
   authenticateUser: (name: string) => {
     if (name.trim()) {
-      set({ loading: true, error: null });
-
       set({
         username: name,
         isAuthenticated: true,
         loading: false,
+        error: null,
       });
+      setStorageItem(StorageKeys.userName, name);
     } else {
       set({
         error: 'Please enter a valid username.',

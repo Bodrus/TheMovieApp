@@ -3,7 +3,7 @@ import { View, Text, ScrollView, ActivityIndicator } from 'react-native';
 import { RouteProp } from '@react-navigation/native';
 
 import { AuthorizedStackParamList, Routes } from '../../navigation/types.ts';
-import styles from './style.tsx';
+import styles from './style.ts';
 import { useArtistInfo } from '../../hooks/useLastFM.ts';
 import { showMessage } from 'react-native-flash-message';
 

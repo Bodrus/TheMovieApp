@@ -11,7 +11,7 @@ import {
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { AuthorizedStackParamList, Routes } from '../../navigation/types.ts';
 import { Album, Artist } from '../../types.ts';
-import styles from './style.tsx';
+import styles from './style.ts';
 import { useTopAlbums, useTopArtists } from '../../hooks/useLastFM.ts';
 import { showMessage } from 'react-native-flash-message';
 
@@ -104,6 +104,7 @@ const AlbumsScreen: React.FC = () => {
           contentContainerStyle={styles.albumListContainer}
           onEndReached={handleLoadMore}
           onEndReachedThreshold={0.5}
+          ListFooterComponent={<ActivityIndicator size="small" />}
         />
       )}
     </View>

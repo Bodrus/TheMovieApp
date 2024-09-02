@@ -1,6 +1,10 @@
-// Хук для получения топовых артистов
 import { useInfiniteQuery, useQuery } from '../domain/queryClient.ts';
-import { getArtistInfo, getTopAlbums, getTopArtists } from '../api/lastfm.ts';
+import {
+  getAlbumInfo,
+  getArtistInfo,
+  getTopAlbums,
+  getTopArtists,
+} from '../api/lastfm.ts';
 
 export const useTopArtists = () => {
   return useQuery({
@@ -31,5 +35,13 @@ export const useArtistInfo = (artist: string) => {
     queryKey: ['artistInfo', artist],
     queryFn: () => getArtistInfo(artist),
     enabled: !!artist,
+  });
+};
+
+export const useAlbumInfo = (artist: string, album: string) => {
+  return useQuery({
+    queryKey: ['artistInfo', artist, album],
+    queryFn: () => getAlbumInfo(artist, album),
+    enabled: !!artist && !!album,
   });
 };

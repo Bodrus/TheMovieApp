@@ -8,8 +8,9 @@ import {
 import { fetchFromLastFM } from '../utils/fetchFromLastFM.ts';
 
 export const getTopArtists = async (): Promise<TopArtistsResponse> => {
-  const endpoint = `?method=chart.getTopArtists&api_key=${API_KEY}&format=json`;
-  return fetchFromLastFM<TopArtistsResponse>(endpoint);
+  return fetchFromLastFM<TopArtistsResponse>(
+    `?method=chart.getTopArtists&api_key=${API_KEY}&format=json`,
+  );
 };
 
 export const getTopAlbums = async (

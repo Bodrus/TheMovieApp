@@ -1,56 +1,58 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, Image, ScrollView, Button } from 'react-native';
+import React from 'react';
 import {
-  NavigationProp,
-  RouteProp,
-  useNavigation,
-} from '@react-navigation/native';
+  View,
+  Text,
+  Image,
+  ScrollView,
+  Button,
+  ActivityIndicator,
+} from 'react-native';
 import { AuthorizedStackParamList, Routes } from '../../navigation/types.ts';
-import { getAlbumInfo } from '../../api/lastfm.ts';
-import { AlbumInfo, Track, Wiki } from '../../types.ts';
-import styles from './style.tsx';
+import { Track, Wiki } from '../../types.ts';
+import styles from './style.ts';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { useAlbumInfo } from '../../hooks/useLastFM.ts';
+import { showMessage } from 'react-native-flash-message';
 
-type AlbumSongsScreenProps = {
-  route: RouteProp<AuthorizedStackParamList, Routes.AlbumSongs>;
-};
-
-const AlbumSongsScreen: React.FC<AlbumSongsScreenProps> = ({ route }) => {
-  const navigation = useNavigation<NavigationProp<AuthorizedStackParamList>>();
-
+const AlbumSongsScreen = ({
+  navigation,
+  route,
+}: NativeStackScreenProps<AuthorizedStackParamList, Routes.AlbumSongs>) => {
   const { album, artist } = route.params;
-  const [albumInfo, setAlbumInfo] = useState<AlbumInfo>();
 
-  const fetchAlbumDetail = async (album: string, artist: string) => {
-    try {
-      const data = await getAlbumInfo(artist, album);
-      setAlbumInfo(data.album);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  const { data: albumInfo, isLoading, error } = useAlbumInfo(artist, album);
 
-  useEffect(() => {
-    fetchAlbumDetail(album, artist);
-  }, [album, artist]);
+  if (error) {
+    showMessage({ message: 'error load list of songs', type: 'danger' });
+  }
 
   const handlePress = (data: Wiki) => () =>
     navigation.navigate(Routes.AlbumDetails, { data, artist });
 
   return (
-    <ScrollView style={styles.container}>
-      <Image
-        source={{ uri: albumInfo?.image[3]['#text'] }}
-        style={styles.albumImage}
-      />
-      {albumInfo?.wiki && (
-        <Button title="Go to details" onPress={handlePress(albumInfo.wiki)} />
+    <>
+      {isLoading ? (
+        <ActivityIndicator size="large" />
+      ) : (
+        <ScrollView style={styles.container}>
+          <Image
+            source={{ uri: albumInfo?.album?.image[3]['#text'] }}
+            style={styles.albumImage}
+          />
+          {albumInfo?.album.wiki && (
+            <Button
+              title="Go to details"
+              onPress={handlePress(albumInfo.album.wiki)}
+            />
+          )}
+          {albumInfo?.album.tracks.track.map((item: Track) => (
+            <View style={styles.trackItem} key={item.name}>
+              <Text>{item.name}</Text>
+            </View>
+          ))}
+        </ScrollView>
       )}
-      {albumInfo?.tracks.track.map((item: Track) => (
-        <View style={styles.trackItem} key={item.name}>
-          <Text>{item.name}</Text>
-        </View>
-      ))}
-    </ScrollView>
+    </>
   );
 };
 

@@ -4,7 +4,7 @@ import { focusManager } from '@tanstack/query-core';
 import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
 
 import { queryClient } from './queryClient.ts';
-import { clientPersister } from '../stores/AsyncStorage.ts';
+import { clientPersister } from '../stores/Storage.ts';
 
 interface Props {
   children?: ReactNode;
