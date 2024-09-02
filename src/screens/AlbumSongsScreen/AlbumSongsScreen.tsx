@@ -46,7 +46,7 @@ const AlbumSongsScreen: React.FC<AlbumSongsScreenProps> = ({ route }) => {
         <Button title="Go to details" onPress={handlePress(albumInfo.wiki)} />
       )}
       {albumInfo?.tracks.track.map((item: Track) => (
-        <View style={styles.trackItem}>
+        <View style={styles.trackItem} key={item.name}>
           <Text>{item.name}</Text>
         </View>
       ))}

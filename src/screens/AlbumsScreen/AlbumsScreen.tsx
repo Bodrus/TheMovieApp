@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   View,
   FlatList,
@@ -10,72 +10,39 @@ import {
 } from 'react-native';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { AuthorizedStackParamList, Routes } from '../../navigation/types.ts';
-import { getTopArtists, getTopAlbums } from '../../api/lastfm.ts';
 import { Album, Artist } from '../../types.ts';
 import styles from './style.tsx';
+import { useTopAlbums, useTopArtists } from '../../hooks/useLastFM.ts';
+import { showMessage } from 'react-native-flash-message';
 
 const AlbumsScreen: React.FC = () => {
   const navigation = useNavigation<NavigationProp<AuthorizedStackParamList>>();
 
-  const [artists, setArtists] = useState<Artist[]>([]);
-  const [albums, setAlbums] = useState<Album[]>([]);
-  const [loadingArtists, setLoadingArtists] = useState(true);
-  const [loadingAlbums, setLoadingAlbums] = useState(false);
   const [selectedArtist, setSelectedArtist] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
 
-  const [loadingMore, setLoadingMore] = useState(false); // Состояние загрузки следующей страницы
-  const [page, setPage] = useState(1); // Текущая страница
-
-  const fetchAlbums = async (pageNumber: number = 1) => {
-    if (selectedArtist) {
-      if (pageNumber === 1) {
-        setLoadingAlbums(true);
-        setAlbums([]); // Очищаем альбомы при смене исполнителя
-      } else {
-        setLoadingMore(true);
-      }
-      try {
-        const data = await getTopAlbums(
-          selectedArtist.toLowerCase(),
-          pageNumber,
-        );
-        setAlbums(prevAlbums => [...prevAlbums, ...data.topalbums.album]);
-        setLoadingAlbums(false);
-        setLoadingMore(false);
-      } catch (err) {
-        setError('Failed to fetch top albums');
-        setLoadingAlbums(false);
-        setLoadingMore(false);
-      }
-    }
-  };
+  const {
+    data: artists,
+    isLoading: loadingArtists,
+    error: errorArtist,
+  } = useTopArtists();
+  const {
+    data: albums,
+    isLoading: loadingAlbums,
+    fetchNextPage,
+    error: errorAlbums,
+  } = useTopAlbums(selectedArtist || 'Bon Jovi');
 
   const handleLoadMore = () => {
-    if (!loadingMore) {
-      setPage(prevPage => prevPage + 1);
-      fetchAlbums(page + 1);
-    }
+    fetchNextPage();
   };
 
-  useEffect(() => {
-    const fetchArtists = async () => {
-      try {
-        const data = await getTopArtists();
-        setArtists(data.artists.artist);
-        setLoadingArtists(false);
-      } catch (err) {
-        setError('Failed to fetch top artists');
-        setLoadingArtists(false);
-      }
-    };
+  if (errorAlbums) {
+    showMessage({ message: 'error load Albums', type: 'danger' });
+  }
 
-    fetchArtists();
-  }, []);
-
-  useEffect(() => {
-    fetchAlbums();
-  }, [selectedArtist]);
+  if (errorArtist) {
+    showMessage({ message: 'error load errorArtist', type: 'danger' });
+  }
 
   const renderArtistItem: ListRenderItem<Artist> = ({ item }) => (
     <TouchableOpacity
@@ -89,7 +56,8 @@ const AlbumsScreen: React.FC = () => {
   );
 
   const renderAlbumItem: ListRenderItem<Album> = ({ item }) => {
-    const imageUrl = item.image[2]['#text'];
+    const imageUrl = item.image[3]['#text'];
+
     return (
       <TouchableOpacity
         onPress={() =>
@@ -118,7 +86,7 @@ const AlbumsScreen: React.FC = () => {
         <ActivityIndicator size="large" />
       ) : (
         <FlatList
-          data={artists}
+          data={artists?.artists.artist}
           horizontal
           keyExtractor={item => item.name}
           renderItem={renderArtistItem}
@@ -130,19 +98,14 @@ const AlbumsScreen: React.FC = () => {
         <ActivityIndicator size="large" />
       ) : (
         <FlatList
-          data={albums}
+          data={albums?.pages.flatMap(page => page.topalbums.album)}
           keyExtractor={item => item.name}
           renderItem={renderAlbumItem}
           contentContainerStyle={styles.albumListContainer}
           onEndReached={handleLoadMore}
-          onEndReachedThreshold={0.5} // Процент видимой области списка перед вызовом onEndReached
-          ListFooterComponent={
-            loadingMore ? <ActivityIndicator size="small" /> : null
-          }
+          onEndReachedThreshold={0.5}
         />
       )}
-
-      {error && <Text style={styles.errorText}>{error}</Text>}
     </View>
   );
 };

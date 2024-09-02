@@ -7,20 +7,15 @@ import {
 } from '../types.ts';
 
 export const getTopArtists = async (): Promise<TopArtistsResponse> => {
-  try {
-    const response = await fetch(
-      `${LASTFM_API_URL}?method=chart.getTopArtists&api_key=${API_KEY}&format=json`,
-    );
+  const response = await fetch(
+    `${LASTFM_API_URL}?method=chart.getTopArtists&api_key=${API_KEY}&format=json`,
+  );
 
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-
-    return await response.json();
-  } catch (error) {
-    console.error('Fetch error:', error);
-    throw error;
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
   }
+
+  return await response.json();
 };
 
 export const getTopAlbums = async (

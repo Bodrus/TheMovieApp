@@ -37,17 +37,10 @@ onlineManager.setEventListener(setOnline => {
   });
 });
 
-// if (__DEV__) {
-//   import('react-query-native-devtools').then(({ addPlugin }) => {
-//     addPlugin({ queryClient });
-//   });
-// }
-
 export {
-  useMutation,
-  useQueries,
   useQuery,
   useQueryClient,
+  useInfiniteQuery,
   type UseMutationResult,
   type UseQueryOptions,
   type UseQueryResult,

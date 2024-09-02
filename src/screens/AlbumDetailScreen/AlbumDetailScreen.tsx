@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import React from 'react';
+import { View, Text, ScrollView, ActivityIndicator } from 'react-native';
 import { RouteProp } from '@react-navigation/native';
 
 import { AuthorizedStackParamList, Routes } from '../../navigation/types.ts';
-import { getArtistInfo } from '../../api/lastfm.ts';
-import { ArtistInfo } from '../../types.ts';
 import styles from './style.tsx';
+import { useArtistInfo } from '../../hooks/useLastFM.ts';
+import { showMessage } from 'react-native-flash-message';
 
 type AlbumDetailScreenProps = {
   route: RouteProp<AuthorizedStackParamList, Routes.AlbumDetails>;
@@ -13,20 +13,11 @@ type AlbumDetailScreenProps = {
 
 const AlbumDetailScreen: React.FC<AlbumDetailScreenProps> = ({ route }) => {
   const { data, artist } = route.params;
-  const [artistInfo, setArtistInfo] = useState<ArtistInfo>();
+  const { data: artistInfo, isLoading, error } = useArtistInfo(artist);
 
-  const fetchArtistInfo = async (artist: string) => {
-    try {
-      const data = await getArtistInfo(artist);
-      setArtistInfo(data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  useEffect(() => {
-    fetchArtistInfo(artist);
-  }, [artist]);
+  if (error) {
+    showMessage({ message: 'error load errorArtist', type: 'danger' });
+  }
 
   return (
     <ScrollView style={styles.container}>
@@ -42,6 +33,7 @@ const AlbumDetailScreen: React.FC<AlbumDetailScreenProps> = ({ route }) => {
           {data.content || ''}
         </Text>
       </View>
+      {isLoading && <ActivityIndicator size="large" />}
       {artistInfo && (
         <View style={styles.wikiContainer}>
           <Text style={styles.wikiTitle}>About this Artist</Text>
