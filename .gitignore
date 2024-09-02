@@ -9,6 +9,8 @@ dist/
 npm-debug.log
 yarn-error.log
 /android/build/
+/android/app/build/
+/ios/build/
 
 # Compiled Java class files
 *.class
