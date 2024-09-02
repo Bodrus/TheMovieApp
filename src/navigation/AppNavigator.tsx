@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { RootStackParamList } from './types';
+import { RootStackParamList, Routes } from './types';
 
 import { useAuthStore } from '../stores/useAuthStore.ts';
 
@@ -17,10 +17,13 @@ const AppNavigator = () => {
     <NavigationContainer>
       <RootStack.Navigator screenOptions={{ headerShown: false }}>
         {isAuthenticated ? (
-          <RootStack.Screen name="Authorized" component={AuthorizedNavigator} />
+          <RootStack.Screen
+            name={Routes.Authorized}
+            component={AuthorizedNavigator}
+          />
         ) : (
           <RootStack.Screen
-            name="Unauthorized"
+            name={Routes.Unauthorized}
             component={UnauthorizedNavigator}
           />
         )}

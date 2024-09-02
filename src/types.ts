@@ -83,6 +83,14 @@ export interface AlbumInfo {
   wiki?: Wiki;
 }
 
+export interface ArtistInfo {
+  artist: {
+    name: string;
+    image: Image[];
+    bio: Wiki;
+  };
+}
+
 export interface GetAlbumInfoResponse {
   album: AlbumInfo;
 }

@@ -1,15 +1,32 @@
-import React from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, ScrollView } from 'react-native';
 import { RouteProp } from '@react-navigation/native';
 
-import { AuthorizedStackParamList } from '../../navigation/types.ts';
+import { AuthorizedStackParamList, Routes } from '../../navigation/types.ts';
+import { getArtistInfo } from '../../api/lastfm.ts';
+import { ArtistInfo } from '../../types.ts';
+import styles from './style.tsx';
 
 type AlbumDetailScreenProps = {
-  route: RouteProp<AuthorizedStackParamList, 'AlbumDetails'>;
+  route: RouteProp<AuthorizedStackParamList, Routes.AlbumDetails>;
 };
 
 const AlbumDetailScreen: React.FC<AlbumDetailScreenProps> = ({ route }) => {
-  const { data } = route.params;
+  const { data, artist } = route.params;
+  const [artistInfo, setArtistInfo] = useState<ArtistInfo>();
+
+  const fetchArtistInfo = async (artist: string) => {
+    try {
+      const data = await getArtistInfo(artist);
+      setArtistInfo(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchArtistInfo(artist);
+  }, [artist]);
 
   return (
     <ScrollView style={styles.container}>
@@ -18,44 +35,28 @@ const AlbumDetailScreen: React.FC<AlbumDetailScreenProps> = ({ route }) => {
         <Text style={styles.wikiPublished}>{data.published}</Text>
         <Text style={styles.wikiSummary}>
           <Text style={styles.textBold}>Summary: </Text>
-          {data.summary}
+          {data.summary || ''}
         </Text>
         <Text style={styles.wikiSummary}>
           <Text style={styles.textBold}>Content: </Text>
-          {data.content}
+          {data.content || ''}
         </Text>
       </View>
+      {artistInfo && (
+        <View style={styles.wikiContainer}>
+          <Text style={styles.wikiTitle}>About this Artist</Text>
+          <Text style={styles.wikiSummary}>
+            <Text style={styles.textBold}>Summary: </Text>
+            {artistInfo.artist.bio.summary || ''}
+          </Text>
+          <Text style={styles.wikiSummary}>
+            <Text style={styles.textBold}>Content: </Text>
+            {artistInfo.artist.bio.content || ''}
+          </Text>
+        </View>
+      )}
     </ScrollView>
   );
 };
 
 export default AlbumDetailScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 10,
-  },
-  wikiContainer: {
-    marginTop: 20,
-    marginBottom: 20,
-  },
-  wikiTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 10,
-  },
-  wikiPublished: {
-    fontSize: 14,
-    color: '#666',
-    marginBottom: 10,
-  },
-  wikiSummary: {
-    fontSize: 16,
-    lineHeight: 24,
-    marginBottom: 10,
-  },
-  textBold: {
-    fontWeight: 'bold',
-  },
-});

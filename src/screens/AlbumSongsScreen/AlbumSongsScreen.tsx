@@ -1,24 +1,17 @@
-// screens/AlbumSongsScreen.tsx
 import React, { useEffect, useState } from 'react';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  ScrollView,
-  Button,
-} from 'react-native';
+import { View, Text, Image, ScrollView, Button } from 'react-native';
 import {
   NavigationProp,
   RouteProp,
   useNavigation,
 } from '@react-navigation/native';
-import { AuthorizedStackParamList } from '../../navigation/types.ts';
+import { AuthorizedStackParamList, Routes } from '../../navigation/types.ts';
 import { getAlbumInfo } from '../../api/lastfm.ts';
 import { AlbumInfo, Track, Wiki } from '../../types.ts';
+import styles from './style.tsx';
 
 type AlbumSongsScreenProps = {
-  route: RouteProp<AuthorizedStackParamList, 'AlbumSongs'>;
+  route: RouteProp<AuthorizedStackParamList, Routes.AlbumSongs>;
 };
 
 const AlbumSongsScreen: React.FC<AlbumSongsScreenProps> = ({ route }) => {
@@ -41,7 +34,7 @@ const AlbumSongsScreen: React.FC<AlbumSongsScreenProps> = ({ route }) => {
   }, [album, artist]);
 
   const handlePress = (data: Wiki) => () =>
-    navigation.navigate('AlbumDetails', { data });
+    navigation.navigate(Routes.AlbumDetails, { data, artist });
 
   return (
     <ScrollView style={styles.container}>
@@ -60,26 +53,5 @@ const AlbumSongsScreen: React.FC<AlbumSongsScreenProps> = ({ route }) => {
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 10,
-  },
-  albumImage: {
-    width: '100%',
-    height: 200,
-    resizeMode: 'cover',
-    marginHorizontal: -10,
-  },
-  trackListContainer: {
-    paddingTop: 10,
-  },
-  trackItem: {
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
-  },
-});
 
 export default AlbumSongsScreen;

@@ -7,12 +7,12 @@ import {
   Image,
   ActivityIndicator,
   ListRenderItem,
-  StyleSheet,
 } from 'react-native';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
-import { AuthorizedStackParamList } from '../../navigation/types.ts';
+import { AuthorizedStackParamList, Routes } from '../../navigation/types.ts';
 import { getTopArtists, getTopAlbums } from '../../api/lastfm.ts';
 import { Album, Artist } from '../../types.ts';
+import styles from './style.tsx';
 
 const AlbumsScreen: React.FC = () => {
   const navigation = useNavigation<NavigationProp<AuthorizedStackParamList>>();
@@ -93,7 +93,7 @@ const AlbumsScreen: React.FC = () => {
     return (
       <TouchableOpacity
         onPress={() =>
-          navigation.navigate('AlbumSongs', {
+          navigation.navigate(Routes.AlbumSongs, {
             album: item.name,
             artist: item.artist.name,
           })
@@ -146,45 +146,5 @@ const AlbumsScreen: React.FC = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 10,
-  },
-  artistItem: {
-    padding: 10,
-  },
-  selectedArtistItem: {
-    borderBottomWidth: 2,
-    borderColor: 'blue',
-  },
-  albumItem: {
-    flex: 1,
-    margin: 10,
-  },
-  albumImage: {
-    width: '100%',
-    height: 200,
-    resizeMode: 'cover',
-  },
-  noImageContainer: {
-    width: '100%',
-    height: 200,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#ccc',
-  },
-  albumName: {
-    textAlign: 'center',
-    marginTop: 10,
-  },
-  albumListContainer: {
-    marginTop: 20,
-  },
-  errorText: {
-    color: 'red',
-  },
-});
 
 export default AlbumsScreen;

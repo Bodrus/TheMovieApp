@@ -1,16 +1,25 @@
 import { Wiki } from '../types.ts';
 
+export enum Routes {
+  Login = 'Login',
+  Albums = 'Albums',
+  AlbumSongs = 'AlbumSongs',
+  AlbumDetails = 'AlbumDetails',
+  Unauthorized = 'Unauthorized',
+  Authorized = 'Authorized',
+}
+
 export type UnauthorizedStackParamList = {
-  Login: undefined;
+  [Routes.Login]: undefined;
 };
 
 export type AuthorizedStackParamList = {
-  Albums: undefined;
-  AlbumSongs: { album: string; artist: string };
-  AlbumDetails: { data: Wiki };
+  [Routes.Albums]: undefined;
+  [Routes.AlbumSongs]: { album: string; artist: string };
+  [Routes.AlbumDetails]: { data: Wiki; artist: string };
 };
 
 export type RootStackParamList = {
-  Unauthorized: undefined;
-  Authorized: undefined;
+  [Routes.Unauthorized]: undefined;
+  [Routes.Authorized]: undefined;
 };
