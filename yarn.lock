@@ -2282,6 +2282,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-community/netinfo@npm:^11.3.2":
+  version: 11.3.2
+  resolution: "@react-native-community/netinfo@npm:11.3.2"
+  peerDependencies:
+    react-native: ">=0.59"
+  checksum: 6ec29c1305655f66267a026d3af970a71aa77193b6ed6e6538613334c0470f75ae9d6e3fd7ad40f75d618d6a59d9e14d4986625666d6227f7273f756809f39d3
+  languageName: node
+  linkType: hard
+
 "@react-native/assets-registry@npm:0.75.2":
   version: 0.75.2
   resolution: "@react-native/assets-registry@npm:0.75.2"
@@ -2635,6 +2644,66 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/eslint-plugin-query@npm:^5.53.0":
+  version: 5.53.0
+  resolution: "@tanstack/eslint-plugin-query@npm:5.53.0"
+  dependencies:
+    "@typescript-eslint/utils": ^8.3.0
+  peerDependencies:
+    eslint: ^8.57.0 || ^9.0.0
+  checksum: 3f7a291d765dab98b9ba229bbc1203fbf86763e591442f4c286cca86d7b988bd44d177ce2866a1fb2a7913dfdff9584607f93506aa5fc928290867f280aecbc2
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-core@npm:5.53.2":
+  version: 5.53.2
+  resolution: "@tanstack/query-core@npm:5.53.2"
+  checksum: cac7dce3c1b31101e6caf33f6d75cdfa1a580193a6fa130e5402d21647ca623a0608cea529b0695df73f8ff141ce0d430010c651704d5103db69bd9666fc25f4
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-persist-client-core@npm:5.53.2":
+  version: 5.53.2
+  resolution: "@tanstack/query-persist-client-core@npm:5.53.2"
+  dependencies:
+    "@tanstack/query-core": 5.53.2
+  checksum: 510dd11cbfeded6581b7f3b48b3f637e433f900a252bc66b2373a220cf126ddc2610ea90cfd31b235bb5ed1ace9932549efe5735a3570fb56b2c2d32ccbfca12
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-sync-storage-persister@npm:^5.53.2":
+  version: 5.53.2
+  resolution: "@tanstack/query-sync-storage-persister@npm:5.53.2"
+  dependencies:
+    "@tanstack/query-core": 5.53.2
+    "@tanstack/query-persist-client-core": 5.53.2
+  checksum: 83e860ef81abf234c9afdae7176bf59e0b7530592d9f1028d3fb102ab51a05a504d99e28506373d3d7966f7f3e3d82bf077c131cd453d6539f957d61361b1365
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query-persist-client@npm:^5.53.2":
+  version: 5.53.2
+  resolution: "@tanstack/react-query-persist-client@npm:5.53.2"
+  dependencies:
+    "@tanstack/query-persist-client-core": 5.53.2
+  peerDependencies:
+    "@tanstack/react-query": ^5.53.2
+    react: ^18 || ^19
+  checksum: 3aae31f770513b4ce2f66e3adf94cc510fbdc483b563cc57b16f8d138dcdc30b34fc1da7127e3661c16b7857088447f0252ea4c0ef4ec9bb84444fe1dc661bbe
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.53.2":
+  version: 5.53.2
+  resolution: "@tanstack/react-query@npm:5.53.2"
+  dependencies:
+    "@tanstack/query-core": 5.53.2
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: 8dab90fe514c4768f97a9a60cd0dacc671e0c4fda1b2a8f275a5200fc65b51ed80e10fe16d38b3dbb10659d80d21241c16a75b220a0fc2ee34cbfa11cd358081
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.1.14":
   version: 7.20.5
   resolution: "@types/babel__core@npm:7.20.5"
@@ -2868,6 +2937,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/scope-manager@npm:8.3.0":
+  version: 8.3.0
+  resolution: "@typescript-eslint/scope-manager@npm:8.3.0"
+  dependencies:
+    "@typescript-eslint/types": 8.3.0
+    "@typescript-eslint/visitor-keys": 8.3.0
+  checksum: 2ccf0d965c0e812f21a156bdb551029d2777bf1e6528275ccb9b79f9a36e4c6803c94f4e98519095396d3e416a62dc2356fda7286a6feeec8af6b63154f158d9
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/type-utils@npm:7.18.0":
   version: 7.18.0
   resolution: "@typescript-eslint/type-utils@npm:7.18.0"
@@ -2896,6 +2975,13 @@ __metadata:
   version: 7.18.0
   resolution: "@typescript-eslint/types@npm:7.18.0"
   checksum: 7df2750cd146a0acd2d843208d69f153b458e024bbe12aab9e441ad2c56f47de3ddfeb329c4d1ea0079e2577fea4b8c1c1ce15315a8d49044586b04fedfe7a4d
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/types@npm:8.3.0":
+  version: 8.3.0
+  resolution: "@typescript-eslint/types@npm:8.3.0"
+  checksum: 6fa6be32dbb32899b0ccb6a5cf78bf85892efa87048e0d3939f706743d3c2ad4afab8228d588883ac314d4934a01bafc5e4043b6608ebb82290edf3bfc17f442
   languageName: node
   linkType: hard
 
@@ -2936,6 +3022,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/typescript-estree@npm:8.3.0":
+  version: 8.3.0
+  resolution: "@typescript-eslint/typescript-estree@npm:8.3.0"
+  dependencies:
+    "@typescript-eslint/types": 8.3.0
+    "@typescript-eslint/visitor-keys": 8.3.0
+    debug: ^4.3.4
+    fast-glob: ^3.3.2
+    is-glob: ^4.0.3
+    minimatch: ^9.0.4
+    semver: ^7.6.0
+    ts-api-utils: ^1.3.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: edfddfa895201be7cc6c83e8d4d72ce3e0877693bf109ced94dcd1496fc45ea9cceae08e1b8a451bee7df7f23748f79b80797ddf49d5e6c96d8f2053ce28e966
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/utils@npm:7.18.0":
   version: 7.18.0
   resolution: "@typescript-eslint/utils@npm:7.18.0"
@@ -2968,6 +3073,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/utils@npm:^8.3.0":
+  version: 8.3.0
+  resolution: "@typescript-eslint/utils@npm:8.3.0"
+  dependencies:
+    "@eslint-community/eslint-utils": ^4.4.0
+    "@typescript-eslint/scope-manager": 8.3.0
+    "@typescript-eslint/types": 8.3.0
+    "@typescript-eslint/typescript-estree": 8.3.0
+  peerDependencies:
+    eslint: ^8.57.0 || ^9.0.0
+  checksum: 041cd2cef3d89d0b45c99a5226aadfa0b25fdd517842cf6dd864ae57fa28afb5f613f5589fe5138662025903de9df8e24ed7fe55486da46e971751405b5ed9fb
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/visitor-keys@npm:5.62.0":
   version: 5.62.0
   resolution: "@typescript-eslint/visitor-keys@npm:5.62.0"
@@ -2988,6 +3107,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/visitor-keys@npm:8.3.0":
+  version: 8.3.0
+  resolution: "@typescript-eslint/visitor-keys@npm:8.3.0"
+  dependencies:
+    "@typescript-eslint/types": 8.3.0
+    eslint-visitor-keys: ^3.4.3
+  checksum: 23a85ae0a3d693be1c9db92457727ab3f16cac3d1fb4950e29bfe2b0f4d186a755a71b2a347063cc94cf03b8dd1367502e0a60386eed71425f74c18fb686b0e8
+  languageName: node
+  linkType: hard
+
 "@ungap/structured-clone@npm:^1.2.0":
   version: 1.2.0
   resolution: "@ungap/structured-clone@npm:1.2.0"
@@ -3002,12 +3131,17 @@ __metadata:
     "@babel/core": ^7.20.0
     "@babel/preset-env": ^7.20.0
     "@babel/runtime": ^7.20.0
+    "@react-native-community/netinfo": ^11.3.2
     "@react-native/babel-preset": 0.75.2
     "@react-native/eslint-config": 0.75.2
     "@react-native/metro-config": 0.75.2
     "@react-native/typescript-config": 0.75.2
     "@react-navigation/native": ^6.1.18
     "@react-navigation/native-stack": ^6.11.0
+    "@tanstack/eslint-plugin-query": ^5.53.0
+    "@tanstack/query-sync-storage-persister": ^5.53.2
+    "@tanstack/react-query": ^5.53.2
+    "@tanstack/react-query-persist-client": ^5.53.2
     "@types/md5": ^2.3.5
     "@types/react": ^18.2.6
     "@types/react-test-renderer": ^18.0.0
@@ -3019,7 +3153,9 @@ __metadata:
     react: 18.3.1
     react-native: 0.75.2
     react-native-dotenv: ^3.4.11
+    react-native-flash-message: ^0.4.2
     react-native-keychain: ^8.2.0
+    react-native-mmkv: ^3.0.2
     react-native-safe-area-context: ^4.10.9
     react-native-screens: ^3.34.0
     react-test-renderer: 18.3.1
@@ -8044,6 +8180,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-flash-message@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "react-native-flash-message@npm:0.4.2"
+  dependencies:
+    prop-types: ^15.8.1
+    react-native-iphone-screen-helper: ^2.0.2
+  peerDependencies:
+    prop-types: ^15.0 || ^16.0
+    react: "*"
+    react-native: "*"
+  checksum: ab1e83db9f75888607cdeac8160194630a3e16f5e16133b6316d595b392b92f1c3b8e597e365636dcf3c622a4a5731753ce24fe9710867335c06ec0d212c5178
+  languageName: node
+  linkType: hard
+
 "react-native-flipper@npm:^0.164.0":
   version: 0.164.0
   resolution: "react-native-flipper@npm:0.164.0"
@@ -8054,10 +8204,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-iphone-screen-helper@npm:^2.0.2":
+  version: 2.1.1
+  resolution: "react-native-iphone-screen-helper@npm:2.1.1"
+  peerDependencies:
+    react-native: ">=0.42.0"
+  checksum: 1acbff415fcade41b0f191ea644bc1ef84c7b10b617ca8e82db586f2f3a371a867cca81f39f1971db7b582a42ffbbf804d6b132424635b03d28eeecf4698e84d
+  languageName: node
+  linkType: hard
+
 "react-native-keychain@npm:^8.2.0":
   version: 8.2.0
   resolution: "react-native-keychain@npm:8.2.0"
   checksum: 4c4d5331013b8ab17c21120a2388e1e82aa30586738c0a34ed9dcffb6ce12454125ddb690951cad5563c9290b060eb68ccffa9477650cc3a5ddc347696b5d4ef
+  languageName: node
+  linkType: hard
+
+"react-native-mmkv@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "react-native-mmkv@npm:3.0.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: a6426a446514abac7f2ce76a54716210ff26e4220317d86cae0efd13b878566ce1112380915a36deb3e5e3498fa1c8910a82065b547f6c24d61aa6a026af01ed
   languageName: node
   linkType: hard
 

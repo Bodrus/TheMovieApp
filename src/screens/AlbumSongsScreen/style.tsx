@@ -9,7 +9,6 @@ export default StyleSheet.create({
     width: '100%',
     height: 200,
     resizeMode: 'cover',
-    marginHorizontal: -10,
   },
   trackListContainer: {
     paddingTop: 10,

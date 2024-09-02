@@ -1,0 +1,164 @@
+{
+  "buildFiles": [
+    "/Users/bodrus/Projects/TheMovieApp/node_modules/react-native-mmkv/MMKV/Core/CMakeLists.txt",
+    "/Users/bodrus/Projects/TheMovieApp/node_modules/react-native-mmkv/android/CMakeLists.txt",
+    "/Users/bodrus/Projects/TheMovieApp/node_modules/react-native-mmkv/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/bodrus/Projects/TheMovieApp/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
+    "/Users/bodrus/Projects/TheMovieApp/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
+    "/Users/bodrus/Projects/TheMovieApp/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/bodrus/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/bodrus/Projects/TheMovieApp/android/app/.cxx/Debug/281u6jot/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/bodrus/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/bodrus/Projects/TheMovieApp/android/app/.cxx/Debug/281u6jot/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "react_codegen_safeareacontext::@7984cd80db47aa7b952a": {
+      "artifactName": "react_codegen_safeareacontext",
+      "abi": "x86",
+      "output": "/Users/bodrus/Projects/TheMovieApp/android/app/build/intermediates/cxx/Debug/281u6jot/obj/x86/libreact_codegen_safeareacontext.so",
+      "runtimeFiles": [
+        "/Users/bodrus/.gradle/caches/8.8/transforms/fdf71abf6ba111636eace253ef345c59/transformed/fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/folly_runtime/libs/android.x86/libfolly_runtime.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/glog/libs/android.x86/libglog.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/jsi/libs/android.x86/libjsi.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_codegen_rncore/libs/android.x86/libreact_codegen_rncore.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_debug/libs/android.x86/libreact_debug.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_nativemodule_core/libs/android.x86/libreact_nativemodule_core.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_core/libs/android.x86/libreact_render_core.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_debug/libs/android.x86/libreact_render_debug.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_graphics/libs/android.x86/libreact_render_graphics.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_mapbuffer/libs/android.x86/libreact_render_mapbuffer.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_componentregistry/libs/android.x86/libreact_render_componentregistry.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_utils/libs/android.x86/libreact_utils.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/rrc_view/libs/android.x86/librrc_view.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/turbomodulejsijni/libs/android.x86/libturbomodulejsijni.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/yoga/libs/android.x86/libyoga.so"
+      ]
+    },
+    "core::@1b9a7d546b295b7d0867": {
+      "artifactName": "core",
+      "abi": "x86",
+      "output": "/Users/bodrus/Projects/TheMovieApp/android/app/.cxx/Debug/281u6jot/x86/RNMmkvSpec_cxxmodule_autolinked_build/core/libcore.a",
+      "runtimeFiles": []
+    },
+    "react-native-mmkv::@4ae6a1e65d3e68ba0197": {
+      "artifactName": "react-native-mmkv",
+      "abi": "x86",
+      "output": "/Users/bodrus/Projects/TheMovieApp/android/app/build/intermediates/cxx/Debug/281u6jot/obj/x86/libreact-native-mmkv.so",
+      "runtimeFiles": [
+        "/Users/bodrus/Projects/TheMovieApp/android/app/build/intermediates/cxx/Debug/281u6jot/obj/x86/libreact_codegen_RNMmkvSpec.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/fdf71abf6ba111636eace253ef345c59/transformed/fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/folly_runtime/libs/android.x86/libfolly_runtime.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/glog/libs/android.x86/libglog.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/jsi/libs/android.x86/libjsi.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_codegen_rncore/libs/android.x86/libreact_codegen_rncore.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_debug/libs/android.x86/libreact_debug.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_nativemodule_core/libs/android.x86/libreact_nativemodule_core.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_componentregistry/libs/android.x86/libreact_render_componentregistry.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_core/libs/android.x86/libreact_render_core.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_debug/libs/android.x86/libreact_render_debug.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_graphics/libs/android.x86/libreact_render_graphics.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_imagemanager/libs/android.x86/libreact_render_imagemanager.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_mapbuffer/libs/android.x86/libreact_render_mapbuffer.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_utils/libs/android.x86/libreact_utils.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/rrc_image/libs/android.x86/librrc_image.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/rrc_view/libs/android.x86/librrc_view.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/turbomodulejsijni/libs/android.x86/libturbomodulejsijni.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/yoga/libs/android.x86/libyoga.so"
+      ]
+    },
+    "react_codegen_rnscreens::@25bcbd507e98d3a854ad": {
+      "artifactName": "react_codegen_rnscreens",
+      "abi": "x86",
+      "output": "/Users/bodrus/Projects/TheMovieApp/android/app/build/intermediates/cxx/Debug/281u6jot/obj/x86/libreact_codegen_rnscreens.so",
+      "runtimeFiles": [
+        "/Users/bodrus/.gradle/caches/8.8/transforms/fdf71abf6ba111636eace253ef345c59/transformed/fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/folly_runtime/libs/android.x86/libfolly_runtime.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/glog/libs/android.x86/libglog.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/jsi/libs/android.x86/libjsi.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_codegen_rncore/libs/android.x86/libreact_codegen_rncore.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_debug/libs/android.x86/libreact_debug.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_nativemodule_core/libs/android.x86/libreact_nativemodule_core.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_core/libs/android.x86/libreact_render_core.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_debug/libs/android.x86/libreact_render_debug.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_graphics/libs/android.x86/libreact_render_graphics.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_mapbuffer/libs/android.x86/libreact_render_mapbuffer.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_componentregistry/libs/android.x86/libreact_render_componentregistry.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_utils/libs/android.x86/libreact_utils.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/rrc_view/libs/android.x86/librrc_view.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/turbomodulejsijni/libs/android.x86/libturbomodulejsijni.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/yoga/libs/android.x86/libyoga.so"
+      ]
+    },
+    "appmodules::@6890427a1f51a3e7e1df": {
+      "artifactName": "appmodules",
+      "abi": "x86",
+      "output": "/Users/bodrus/Projects/TheMovieApp/android/app/build/intermediates/cxx/Debug/281u6jot/obj/x86/libappmodules.so",
+      "runtimeFiles": [
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/fabricjni/libs/android.x86/libfabricjni.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/mapbufferjni/libs/android.x86/libmapbufferjni.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_newarchdefaults/libs/android.x86/libreact_newarchdefaults.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/rrc_textinput/libs/android.x86/librrc_textinput.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/rrc_legacyviewmanagerinterop/libs/android.x86/librrc_legacyviewmanagerinterop.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/runtimeexecutor/libs/android.x86/libruntimeexecutor.so",
+        "/Users/bodrus/Projects/TheMovieApp/android/app/build/intermediates/cxx/Debug/281u6jot/obj/x86/libreact-native-mmkv.so",
+        "/Users/bodrus/Projects/TheMovieApp/android/app/build/intermediates/cxx/Debug/281u6jot/obj/x86/libreact_codegen_safeareacontext.so",
+        "/Users/bodrus/Projects/TheMovieApp/android/app/build/intermediates/cxx/Debug/281u6jot/obj/x86/libreact_codegen_rnscreens.so",
+        "/Users/bodrus/Projects/TheMovieApp/android/app/build/intermediates/cxx/Debug/281u6jot/obj/x86/libreact_codegen_RNMmkvSpec.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_imagemanager/libs/android.x86/libreact_render_imagemanager.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/rrc_image/libs/android.x86/librrc_image.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/fdf71abf6ba111636eace253ef345c59/transformed/fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/folly_runtime/libs/android.x86/libfolly_runtime.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/glog/libs/android.x86/libglog.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/jsi/libs/android.x86/libjsi.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_codegen_rncore/libs/android.x86/libreact_codegen_rncore.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_debug/libs/android.x86/libreact_debug.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_utils/libs/android.x86/libreact_utils.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_nativemodule_core/libs/android.x86/libreact_nativemodule_core.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_componentregistry/libs/android.x86/libreact_render_componentregistry.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_core/libs/android.x86/libreact_render_core.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_debug/libs/android.x86/libreact_render_debug.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_graphics/libs/android.x86/libreact_render_graphics.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_mapbuffer/libs/android.x86/libreact_render_mapbuffer.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/rrc_view/libs/android.x86/librrc_view.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/turbomodulejsijni/libs/android.x86/libturbomodulejsijni.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/yoga/libs/android.x86/libyoga.so"
+      ]
+    },
+    "react_codegen_RNMmkvSpec::@7541eabbae598da31a69": {
+      "artifactName": "react_codegen_RNMmkvSpec",
+      "abi": "x86",
+      "output": "/Users/bodrus/Projects/TheMovieApp/android/app/build/intermediates/cxx/Debug/281u6jot/obj/x86/libreact_codegen_RNMmkvSpec.so",
+      "runtimeFiles": [
+        "/Users/bodrus/.gradle/caches/8.8/transforms/fdf71abf6ba111636eace253ef345c59/transformed/fbjni-0.6.0/prefab/modules/fbjni/libs/android.x86/libfbjni.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/folly_runtime/libs/android.x86/libfolly_runtime.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/glog/libs/android.x86/libglog.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/jsi/libs/android.x86/libjsi.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_codegen_rncore/libs/android.x86/libreact_codegen_rncore.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_debug/libs/android.x86/libreact_debug.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_nativemodule_core/libs/android.x86/libreact_nativemodule_core.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_componentregistry/libs/android.x86/libreact_render_componentregistry.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_core/libs/android.x86/libreact_render_core.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_debug/libs/android.x86/libreact_render_debug.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_graphics/libs/android.x86/libreact_render_graphics.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_imagemanager/libs/android.x86/libreact_render_imagemanager.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_render_mapbuffer/libs/android.x86/libreact_render_mapbuffer.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/react_utils/libs/android.x86/libreact_utils.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/rrc_image/libs/android.x86/librrc_image.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/rrc_view/libs/android.x86/librrc_view.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/turbomodulejsijni/libs/android.x86/libturbomodulejsijni.so",
+        "/Users/bodrus/.gradle/caches/8.8/transforms/b05a070e407358a86ce459a71fac5137/transformed/react-android-0.75.2-debug/prefab/modules/yoga/libs/android.x86/libyoga.so"
+      ]
+    }
+  }
+}
