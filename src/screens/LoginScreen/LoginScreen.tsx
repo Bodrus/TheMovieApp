@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, Text } from 'react-native';
 import { useAuthStore } from '../../stores/useAuthStore.ts';
+import styles from './style.ts'; // Импортируем стили
 
 const LoginScreen = () => {
   const authenticateUser = useAuthStore(state => state.authenticateUser);
@@ -13,19 +14,14 @@ const LoginScreen = () => {
   };
 
   return (
-    <View style={{ padding: 16 }}>
+    <View style={styles.container}>
       <TextInput
         placeholder="Enter your name"
         value={name}
         onChangeText={setName}
-        style={{
-          marginBottom: 16,
-          borderColor: '#ccc',
-          borderWidth: 1,
-          padding: 8,
-        }}
+        style={styles.input}
       />
-      {error && <Text style={{ color: 'red' }}>{error}</Text>}
+      {error && <Text style={styles.errorText}>{error}</Text>}
       <Button title={loading ? 'Loading...' : 'Login'} onPress={handleLogin} />
     </View>
   );
